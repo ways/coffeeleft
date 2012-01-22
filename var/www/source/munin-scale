@@ -1,0 +1,33 @@
+#!/bin/bash
+
+hid="/dev/hidraw0"
+
+# sudo ln -s /home/larsfp/bin/munin-scale.sh /etc/munin/plugins/scale
+# /etc/udev/rules.d/99-hidraw-permissions.rules or sudo chmod +r /dev/hidraw3
+# perl usbscale-simple.pl /dev/hidraw3
+#  379.88360954 grams
+
+case $1 in
+   config)
+        echo "graph_title Weight"
+        echo "graph_vlabel grams"
+        echo "weight.label weight"
+#       cat <<'EOM'
+#       graph_title Weight
+#       graph_vlabel grams
+#       weight.label weight
+#EOM
+#       system.label system
+#       system.draw AREA
+#       system.min 0
+#       system.type DERIVE
+#       system.info CPU time spent by the kernel in system activities
+
+        exit 0
+esac
+
+echo -n "weight.value "
+/usr/bin/perl /local/bin/usbscale-simple.pl $hid
+
+exit 0
+

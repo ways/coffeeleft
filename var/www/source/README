@@ -1,0 +1,20 @@
+DoIDareGettingMoreCoffe v.3 20110206
+
+This project is made from free software. Contact me at larsfp@cl.no if you have questions. I did not make the perl-script, I just modyfied it. See original in references.txt.
+
+You need:
+- one pc running ubuntu or other linux.
+- a usb scale. I used one from stamps.com bought through ebay.
+- a coffee pot. Our is a non-transparent, 2 liter, thermo can.
+- some spare time.
+
+How-to:
+- Install munin, munin-node, apache.
+- The .rules file goes in /etc/udev/rules.d/
+- Place munin-scale in /etc/munin/plugins/
+- Place usbscale-simple.pl in /local/bin/ (create this dir)
+
+Problems:
+- The perl script assumes the scale apears as /dev/hidraw0. If you have mouse, keyboard or other devices connected this may be wrong. Change the script.
+- Hidraw works differently in ubuntu 9.10 vs ubuntu 10.04. Test with original script, and apply patch in comments here https://gist.github.com/503896 if problems.
+- The stamps.com scale has a max weight of about 2.2 kg, the same weight as our empty pot. Fortunately, if the empty pot is on the scale when switched on, the scale is calibrated accordingly, and gives a correct result even though it carries up to 4-5 kg.

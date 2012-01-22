@@ -1,0 +1,2 @@
+#Allow all to read hidraws
+KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0644"
