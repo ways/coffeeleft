@@ -1,7 +1,7 @@
 Coffeeleft v.3 20110206
 -----------------------
 
-Using a usb scale to keep an eye on coffee status at the office.
+Using a usb scale to keep an eye on coffee status at the office. The project will be cleaned up a bit next time I have to upgrade HW/SW.
 
 This project is licensed under the GPL. Contact me if you have questions. I did not make the perl-script, I just modyfied it. See original in references.txt.
 

@@ -14,4 +14,4 @@ date=`date +"%H:%M %d.%m.%Y"`
 
 echo $weight > $SCALE
 echo $date > $DATE
-#echo $calibrated > CALIBRATED
+#echo $calibrated > $CALIBRATED
