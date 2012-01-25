@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+html, body, ul, ol, li, form, fieldset, legend, label, p, h1, h2, h3, h4, h5, h6, img, dl, dt, dd, input, select, textarea, checkbox, button, table, tr, th, td, hr { 
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+}
+ul, ol { list-style-type: none; }
+a, button, input, select, textarea { outline: none; }
+
+html, body { height: 100%; }
+body { font-family: Helvetica, Arial, sans-serif; color: #fff; background: url(../images/bg-body.png); position: relative; }
+#wrapper { width: 720px; margin: 0 auto; overflow: hidden; position: relative; }
+	#wrapper .logo { margin: 38px 0 68px 0; }
+	#wrapper h1 { line-height: 38px; font-size: 32px; text-align: center; margin-bottom: 20px; }
+	#wrapper h3 { line-height: 38px; text-align: center; margin-bottom: 20px; }
+	#wrapper .graph { margin: 0 auto 18px 106px; border: 2px #cfcfcf solid; }
+#scale { background: url(../images/scale-color.jpg) no-repeat bottom; width: 496px; height: 94px; margin: 0 0 130px 105px; position: relative; }
+	#scale span { font-size: 20px; font-weight: bold; line-height: 22px; display: block; position: absolute; bottom: 26px; }
+	#scale .min { left: 0px; }
+	#scale .max { right: 0px; }
+	#scale .current { left: 74px; width: 75px; background: url(../images/indicator.jpg) no-repeat top right; padding-top: 46px; }
+#footer { position: fixed; bottom: 0; width: 100%; background: url(../images/bg-footer.png); height: 93px; border-top: 3px #2c565c solid; text-align: center; }
+	#footer img { margin-top: 32px; }
