@@ -1,0 +1,5 @@
+#Allow munin to read hidraws from Cleware
+#BUS=="usb", KERNEL=="hiddev*", SUBSYSTEM=="hiddev", ATTR{idVendor}=="0d50", GROUP="munin", MODE="0660"
+#BUS=="usb", KERNEL=="hiddev*" ATTR{idVendor}=="0d50", GROUP="munin", MODE="0660"
+#KERNEL=="hiddev*", ATTR{idVendor}=="0d50", GROUP="munin", MODE="0660"
+SUBSYSTEM=="usb", KERNEL=="hiddev*", GROUP="munin", MODE="0660"
