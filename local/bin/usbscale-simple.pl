@@ -20,18 +20,18 @@ while (1) {
     #$data = `/bin/cat $device | /usr/bin/head -c 7`;
     $data = `/usr/bin/head -c 7 $device`;
 
-    my $report = ord(substr($data, 1, 1));
-    my $status = ord(substr($data, 2, 1));
-    my $unit   = ord(substr($data, 3, 1));
-    my $exp    = ord(substr($data, 4, 1));
-    my $lsb    = ord(substr($data, 5, 1));
-    my $msb    = ord(substr($data, 6, 1));
-#my $report = ord(substr($data, 0, 1));
-#my $status = ord(substr($data, 1, 1));
-#my $unit   = ord(substr($data, 2, 1));
-#my $exp    = ord(substr($data, 3, 1));
-#my $lsb    = ord(substr($data, 4, 1));
-#my $msb    = ord(substr($data, 5, 1));
+#    my $report = ord(substr($data, 1, 1));
+#    my $status = ord(substr($data, 2, 1));
+#    my $unit   = ord(substr($data, 3, 1));
+#    my $exp    = ord(substr($data, 4, 1));
+#    my $lsb    = ord(substr($data, 5, 1));
+#    my $msb    = ord(substr($data, 6, 1));
+my $report = ord(substr($data, 0, 1));
+my $status = ord(substr($data, 1, 1));
+my $unit   = ord(substr($data, 2, 1));
+my $exp    = ord(substr($data, 3, 1));
+my $lsb    = ord(substr($data, 4, 1));
+my $msb    = ord(substr($data, 5, 1));
 
     my $weight = ($msb * 256 + $lsb) / 10;
     if($exp != 255 && $exp != 0) {
