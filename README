@@ -1,7 +1,7 @@
 Coffeeleft v.3 20110206
 -----------------------
 
-Using a usb scale to keep an eye on coffee status at the office. The project will be cleaned up a bit next time I have to upgrade HW/SW.
+Using a usb scale and a raspberry pi to keep an eye on coffee status at the office. The project will be cleaned up a bit next time I have to upgrade HW/SW.
 
 This project is licensed under the GPL. Contact me if you have questions. I did not make the perl-script, I just modyfied it. See original in references.txt.
 
@@ -11,9 +11,10 @@ https://github.com/ways/coffeeleft
 You need
 --------
 
-* one pc running ubuntu or other linux.
+* one raspberry pi or pc running ubuntu or other linux.
 * a usb scale. I used one from stamps.com bought through ebay.
 * a coffee pot. Our is a non-transparent, 2 liter, thermo can.
+* optional: a LED connected to GPIO
 * some spare time.
 
 
@@ -37,6 +38,6 @@ Problems
 References
 ----------
 
-* Graphics by Leo
+* Graphics by Leo @ Copyleft.no
 * Usb scale: http://gist.github.com/503896 / https://github.com/erjiang/usbscale
 * http://blog.aztekera.com/archives/54
