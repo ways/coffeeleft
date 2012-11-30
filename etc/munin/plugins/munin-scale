@@ -1,11 +1,9 @@
 #!/bin/bash
 
-hid="/dev/hidraw0"
+scale=/tmp/scale
+calibrate=/tmp/calibrate
 
 # sudo ln -s /home/larsfp/bin/munin-scale.sh /etc/munin/plugins/scale
-# /etc/udev/rules.d/99-hidraw-permissions.rules or sudo chmod +r /dev/hidraw3
-# perl usbscale-simple.pl /dev/hidraw3
-#  379.88360954 grams
 
 case $1 in
    config)
@@ -27,7 +25,7 @@ case $1 in
 esac
 
 echo -n "weight.value "
-/usr/bin/perl /local/bin/usbscale-simple.pl $hid
+cat $scale
 
 exit 0
 

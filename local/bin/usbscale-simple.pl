@@ -81,7 +81,7 @@ my $msb    = ord(substr($data, 5, 1));
     } elsif ($status == 0x06) {
         if($waitingflag != 0x06) {
                 #over weight
-            print "OW\n";
+            print "-4\n (Over weight)\n";
             $waitingflag = 0x06;
         last;
         }
